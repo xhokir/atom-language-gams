@@ -114,7 +114,7 @@
 
   # Keywords
   {
-    'match': '^(?i)((set|(variable)|(parameter)|(scalar)|(equation)|(file))s?)'
+    'match': '^(?i)((set|(positive |interger |binary |sos1 |sos2 |semicont |semiint )?variable|parameter|scalar|equation|file)s?)'
     'name': 'keyword.declaration.gams'
   }
   {
@@ -155,7 +155,7 @@
   }
 
   {
-    'match': '(?i)(\\.((fx)|(lo)|(up)|(tl)|(te)|(l(case)?)))'
+    'match': '(?i)(\\.(fx|lo|up|tl|te|l(case)?|range|m|scale|prior|slack(up|lo)?|infeas))'
     'name': 'storage.type.variable.gams'
   }
   {
@@ -163,7 +163,7 @@
     'name': 'support.function.gams'
   }
   {
-    'match': '(?i)(\\.|\\b)(bratio|domlim|iterlim)|lim(col|row)|nodlim|opt(ca|cr)|reslim|sol(print|veopt)|sysout)\\b'
+    'match': '(?i)(\\.|\\b)(bratio|domlim|iterlim|lim(col|row)|nodlim|opt(ca|cr)|reslim|sol(print|veopt)|sysout)\\b'
     'name': 'support.constant.model.gams'
   }
   {
@@ -183,7 +183,7 @@
     'name': 'keyword.control.solve.gams'
   }
   {
-    'match': '\\b(?i)(csv2gdx|gdx(copy|diff|dump|merge|rank|viewer|xrw|2access|2xls)|mcfilter|mdb2gms|sql2gms|xls2gms))\\b'
+    'match': '\\b(?i)(csv2gdx|gdx(copy|diff|dump|merge|rank|viewer|xrw|2access|2xls)|mcfilter|mdb2gms|sql2gms|xls2gms)\\b'
     'name': 'support.utility.gams'
   }
 ]
