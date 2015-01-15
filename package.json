@@ -1,0 +1,11 @@
+{
+  "name": "language-gams",
+  "version": "0.1.0",
+  "description": "A GAMS language implementation for Atom.io",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+  }
+}

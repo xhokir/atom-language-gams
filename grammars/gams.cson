@@ -1,0 +1,166 @@
+'fileTypes': [
+  'gms'
+]
+'name': 'GAMS'
+'patterns':[
+  # Comments
+  {
+    'match': '\\%[0-9]+'
+    'name': 'storage.type.macro.gams'
+  }
+  {
+    'match': '\\%([a-zA-Z0-9_])+\\%'
+    'name': 'storage.type.macro.gams'
+  }
+  {
+    'captures':
+      '0':
+        'name': 'punctuation.definition.comment.gams'
+    'match': '^(\\*).*$\\n?'
+    'name': 'comment.line.star.gams'
+  }
+  {
+    'captures':
+      '0':
+        'name': 'punctuation.definition.comment.gams'
+    'match': '(!).*$\\n?'
+    'name': 'comment.line.custom.gams'
+  }
+  {
+    'begin': '\\$(?i)(ontext)'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.comment.begin.gams'
+    'end': '\\$(?i)(offtext)'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.comment.end.gams'
+    'name': 'comment.block.gams'
+  }
+
+  # Operators
+  {
+    'match': ';'
+    'name': 'keyword.control.terminator.gams'
+  }
+  {
+    'match': '\\.\\.'
+    'name': 'keyword.control.terminator.equation.gams'
+  }
+  {
+    'match': '\\(|\\)'
+    'name': 'keyword.operator.parenthesis.gams'
+  }
+  {
+    'match': ','
+    'name': 'keyword.operator.parenthesis.inside.gams'
+  }
+  {
+    'match': '/'
+    'name': 'keyword.operator.slash.gams'
+  }
+  {
+    'match': '\\=e\\='
+    'name': 'keyword.operator.equation.gams'
+  }
+  {
+    'match': '\\='
+    'name': 'keyword.operator.assignment.gams'
+  }
+  {
+    'match': '\\+|\\-|\\*|\\^|\\*\\*'
+    'name': 'keyword.operator.arithmetic.gams'
+  }
+  {
+    'match': '<|>|<\\=|>\\=|\\=\\=|!\\=|~\\=|(\\bne\\b)|(\\blt\\b)|(\\bgt\\b)'
+    'name': 'keyword.operator.comparison.gams'
+  }
+  {
+    'match': '\\b(?i)(and|or|not|in)\\b'
+    'name': 'keyword.operator.logical.gams'
+  }
+
+  # Constants
+  {
+    'begin': '"'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.gams'
+    'end': '"'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.gams'
+    'name': 'string.quoted.double.gams'
+  }
+  {
+    'begin': '\''
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.gams'
+    'end': '\''
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.gams'
+    'name': 'string.quoted.single.gams'
+  }
+  {
+    'match': '(\\b([0-9]+)\\b)|(\\b1[eE]\\-[0-9]+)|(\\b1E\-9]+)'
+    'name': 'constant.numeric.gams'
+  }
+  {
+    'match': '\\b(?i)(yes|no|off)\\b'
+    'name': 'constant.boolean.gams'
+  }
+
+  # Keywords
+  {
+    'match': '^(?i)((set|(variable)|(parameter)|(scalar)|(equation)|(file))s?)'
+    'name': 'keyword.declaration.gams'
+  }
+  {
+    'match': '\\$(?i)(set(global|local|args)?)'
+    'name': 'storage.type.macro.gams'
+  }
+  {
+    'match': '\\$(?i)(include|batinclude|if(i)?|goto|label)'
+    'name': 'keyword.flow.gams'
+  }
+  {
+    'match': '\\$(?i)(kill|call|load|gdxin|onempty|offempty)'
+    'name': 'keyword.other.gams'
+  }
+  {
+    'match': '\\$(?i)(eolcom|oninline|inlinecom)'
+    'name': 'keyword.other.gams'
+  }
+  {
+    'match': '\\$'
+    'name': 'keyword.other.gams'
+  }
+  {
+    'match': '\\b(?i)(if|while|loop|put(close)?|abort)'
+    'name': 'keyword.flow.gams'
+  }
+  {
+    'match': '\\b(?i)(alias|sum|prod|abs)\\b'
+    'name': 'keyword.function.gams'
+  }
+  {
+    'match': '\\b(?i)(ord|card|sameas)\\b'
+    'name': 'keyword.function.set.gams'
+  }
+  {
+    'match': '\\b(?i)(option|model|solve|using|exist)\\b'
+    'name': 'keyword.function.gams'
+  }
+
+  {
+    'match': '(?i)(\\.((fx)|(lo)|(up)|(tl)|(te)|(l(case)?)))'
+    'name': 'storage.type.variable.gams'
+  }
+  {
+    'match': '\\b(?i)((execute(\\_unload)?))\\b'
+    'name': 'support.function.gams'
+  }
+]
+'scopeName': 'source.gams'
