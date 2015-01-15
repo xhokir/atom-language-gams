@@ -162,5 +162,9 @@
     'match': '\\b(?i)((execute(\\_unload)?))\\b'
     'name': 'support.function.gams'
   }
+  {
+    'match': '(?i)\\.(bratio|cheat|cutoff|domlim|domusd|holdfixed|iter(lim|usd)|lim(col|row)|marginals|modelstat|nodlim|num(depnd|dvar|equ|infes|nopt|nz|unbd|var)|objest|opt(ca|cr|file)|prioropt|reslim|resusd|robj|scaleopt|sol(print|veopt|vestat)|sysout|tmodstat|tol(infrep|proj)|try(int|linear)|tsolstat|workspace)\\b'
+    'name': 'support.constant.model.attributes.gams'
+  }
 ]
 'scopeName': 'source.gams'
