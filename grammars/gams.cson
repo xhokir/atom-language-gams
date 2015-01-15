@@ -150,7 +150,7 @@
     'name': 'keyword.function.set.gams'
   }
   {
-    'match': '\\b(?i)(option|model|solve|using|exist)\\b'
+    'match': '\\b(?i)(option|model|exist)\\b'
     'name': 'keyword.function.gams'
   }
 
@@ -163,8 +163,28 @@
     'name': 'support.function.gams'
   }
   {
-    'match': '(?i)\\.(bratio|cheat|cutoff|domlim|domusd|holdfixed|iter(lim|usd)|lim(col|row)|marginals|modelstat|nodlim|num(depnd|dvar|equ|infes|nopt|nz|unbd|var)|objest|opt(ca|cr|file)|prioropt|reslim|resusd|robj|scaleopt|sol(print|veopt|vestat)|sysout|tmodstat|tol(infrep|proj)|try(int|linear)|tsolstat|workspace)\\b'
+    'match': '(?i)(\\.|\\b)(bratio|domlim|iterlim)|lim(col|row)|nodlim|opt(ca|cr)|reslim|sol(print|veopt)|sysout)\\b'
+    'name': 'support.constant.model.gams'
+  }
+  {
+    'match': '(?i)\\.(cheat|cutoff|domusd|holdfixed|iterusd|marginals|modelstat|num(depnd|dvar|equ|infes|nopt|nz|unbd|var)|objest|optfile|prioropt|resusd|robj|scaleopt|solvestat|tmodstat|tol(infrep|proj)|try(int|linear)|tsolstat|workspace|workfactor)\\b'
     'name': 'support.constant.model.attributes.gams'
+  }
+  {
+    'match': '(?i)\\b(clear|decimals|dmpopt|dmpsym|dualcheck|eject|forlim|kill|measure|oldname|profile(tol)?|savemoint|seed|solslack|subsystems|sys10|threads)\\b'
+    'name': 'support.constant.model.options.gams'
+  }
+  {
+    'match': '\\b(?i)(lo|nlp|qcp|dnlp|mip|minlp|rminlp|minqcp|rminqcp|mpec|rmpec|mcp|cns|mpsge|emp)\\b'
+    'name': 'support.constant.model.type.gams'
+  }
+  {
+    'match': '\\b(?i)(maximizing|minimizing|using|solve)\\b'
+    'name': 'keyword.control.solve.gams'
+  }
+  {
+    'match': '\\b(?i)(csv2gdx|gdx(copy|diff|dump|merge|rank|viewer|xrw|2access|2xls)|mcfilter|mdb2gms|sql2gms|xls2gms))\\b'
+    'name': 'support.utility.gams'
   }
 ]
 'scopeName': 'source.gams'
