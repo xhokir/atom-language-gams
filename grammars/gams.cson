@@ -118,19 +118,39 @@
     'name': 'keyword.declaration.gams'
   }
   {
-    'match': '\\$(?i)(set(global|local|args)?)'
+    'match': '\\$(?i)(setargs)'
     'name': 'storage.type.macro.gams'
   }
   {
-    'match': '\\$(?i)(include|batinclude|if(i)?|goto|label)'
-    'name': 'keyword.flow.gams'
+    'match': '\\$(?i)(comment|eolcom|hidden|inlinecom|maxcol|mincol|(on|off)(eolcom|inline|margin|nestcom))'
+    'name': 'keyword.control.comment.gams'
+  }
+  {
+    'match': '\\$(?i)(abort|double|echo|eject|error|lines|log|(on|off)(dollar|echo|include|listing|symlist|symxref|uellist|uelxref|upper)|single|stars|stitle|title)'
+    'name': 'keyword.control.lst.gams'
+  }
+  {
+    'match': '\\$(?i)(batinclude|include|libinclude|(on|off)(global|include)|shift|sysinclude)'
+    'name': 'keyword.control.include.gams'
+  }
+  {
+    'match': '\\$(?i)(abort|error|goto|if(i)?( not)?|label|set(global|local)?)'
+    'name': 'keyword.control.content.gams'
+  }
+  {
+    'match': '\\$(?i)((on|off)(digit|eps))'
+    'name': 'keyword.control.numerical.gams'
+  }
+  {
+    'match': '\\$(?i)(clear|kill)'
+    'name': 'storage.modifier.gams'
+  }
+  {
+    'match': '\\$(?i)(gdx(in|out)|load|unload)'
+    'name': 'keyword.control.gdx.gams'
   }
   {
     'match': '\\$(?i)(kill|call|load|gdxin|onempty|offempty)'
-    'name': 'keyword.other.gams'
-  }
-  {
-    'match': '\\$(?i)(eolcom|oninline|inlinecom)'
     'name': 'keyword.other.gams'
   }
   {
