@@ -150,7 +150,11 @@
     'name': 'keyword.control.gdx.gams'
   }
   {
-    'match': '\\$(?i)(kill|call|load|gdxin|onempty|offempty)'
+    'match': '\\$(?i)(dollar|(on|off)(delim|empty|end|multi|warning)|phantom|use(205|225|999))'
+    'name': 'keyword.control.compiler.gams'
+  }
+  {
+    'match': '\\$(?i)(call|expose|hide|protect|purge)'
     'name': 'keyword.other.gams'
   }
   {
