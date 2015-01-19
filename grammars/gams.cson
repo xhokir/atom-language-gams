@@ -134,7 +134,7 @@
     'name': 'keyword.control.include.gams'
   }
   {
-    'match': '\\$(?i)(abort|error|goto|if(i)?( not)?|label|set(global|local)?)'
+    'match': '\\$(?i)(abort|error|goto|if(i)?( not)?|label|(set|drop|eval)(global|local)?|)'
     'name': 'keyword.control.content.gams'
   }
   {
