@@ -60,7 +60,7 @@
     'name': 'keyword.operator.slash.gams'
   }
   {
-    'match': '\\=e\\='
+    'match': '\\=(e|l|g)\\='
     'name': 'keyword.operator.equation.gams'
   }
   {
@@ -72,11 +72,11 @@
     'name': 'keyword.operator.arithmetic.gams'
   }
   {
-    'match': '<|>|<\\=|>\\=|\\=\\=|!\\=|~\\=|(\\bne\\b)|(\\blt\\b)|(\\bgt\\b)'
+    'match': '<|(\\blt\\b)|>|\\bgt\\b|<\\=|\\ble\\b|>\\=|\\bge\\b|\\=|\\beq\\b|<>|\\bne\\b'
     'name': 'keyword.operator.comparison.gams'
   }
   {
-    'match': '\\b(?i)(and|or|not|in)\\b'
+    'match': '\\b(?i)(and|or|not|in|xor)\\b'
     'name': 'keyword.operator.logical.gams'
   }
 
@@ -104,7 +104,7 @@
     'name': 'string.quoted.single.gams'
   }
   {
-    'match': '(\\b([0-9]+)\\b)|(\\b1[eE]\\-[0-9]+)|(\\b1E\-9]+)'
+    'match': '(\\b([0-9]+)\\b)|(\\b1[eE]\\-[0-9]+)|(\\b1E\-9]+)\\b'
     'name': 'constant.numeric.gams'
   }
   {
@@ -114,47 +114,47 @@
 
   # Keywords
   {
-    'match': '^(?i)((set|(positive |interger |binary |sos1 |sos2 |semicont |semiint )?variable|parameter|scalar|equation|file)s?)'
+    'match': '^(?i)((set|(positive |interger |binary |sos1 |sos2 |semicont |semiint )?variable|parameter|scalar|equation|file)s?)\\b'
     'name': 'keyword.declaration.gams'
   }
   {
-    'match': '\\$(?i)(setargs)'
+    'match': '\\$(?i)(setargs)\\b'
     'name': 'storage.type.macro.gams'
   }
   {
-    'match': '\\$(?i)(comment|eolcom|hidden|inlinecom|maxcol|mincol|(on|off)(eolcom|inline|margin|nestcom))'
+    'match': '\\$(?i)(comment|eolcom|hidden|inlinecom|maxcol|mincol|(on|off)(eolcom|inline|margin|nestcom))\\b'
     'name': 'keyword.control.comment.gams'
   }
   {
-    'match': '\\$(?i)(abort|double|echo|eject|error|lines|log|(on|off)(dollar|echo|include|listing|symlist|symxref|uellist|uelxref|upper)|single|stars|stitle|title)'
+    'match': '\\$(?i)(abort|double|echo|eject|error|lines|log|(on|off)(dollar|echo|include|listing|symlist|symxref|uellist|uelxref|upper)|single|stars|stitle|title)\\b'
     'name': 'keyword.control.lst.gams'
   }
   {
-    'match': '\\$(?i)(batinclude|include|libinclude|(on|off)(global|include)|shift|sysinclude)'
+    'match': '\\$(?i)(batinclude|include|libinclude|(on|off)(global|include)|shift|sysinclude)\\b'
     'name': 'keyword.control.include.gams'
   }
   {
-    'match': '\\$(?i)(abort|error|goto|if(i)?( not)?|label|(set|drop|eval)(global|local)?|)'
+    'match': '\\$(?i)(abort|error|goto|if((i)?( not)?)|label|(set|drop|eval)(global|local)?)\\b'
     'name': 'keyword.control.content.gams'
   }
   {
-    'match': '\\$(?i)((on|off)(digit|eps))'
+    'match': '\\$(?i)(on|off)(digit|eps)\\b'
     'name': 'keyword.control.numerical.gams'
   }
   {
-    'match': '\\$(?i)(clear|kill)'
+    'match': '\\$(?i)(clear|kill)\\b'
     'name': 'storage.modifier.gams'
   }
   {
-    'match': '\\$(?i)(gdx(in|out)|load|unload)'
+    'match': '\\$(?i)(gdx(in|out)|load|unload)\\b'
     'name': 'keyword.control.gdx.gams'
   }
   {
-    'match': '\\$(?i)(dollar|(on|off)(delim|empty|end|multi|warning)|phantom|use(205|225|999))'
+    'match': '\\$(?i)(dollar|(on|off)(delim|empty|end|multi|warning)|phantom|use(205|225|999))\\b'
     'name': 'keyword.control.compiler.gams'
   }
   {
-    'match': '\\$(?i)(call|expose|hide|protect|purge)'
+    'match': '\\$(?i)(call|expose|hide|protect|purge)\\b'
     'name': 'keyword.other.gams'
   }
   {
@@ -162,7 +162,7 @@
     'name': 'keyword.other.gams'
   }
   {
-    'match': '\\b(?i)(if|while|loop|put(close)?|abort)'
+    'match': '\\b(?i)(if|while|loop|put(close)?|abort)\\b'
     'name': 'keyword.flow.gams'
   }
   {
@@ -179,7 +179,7 @@
   }
 
   {
-    'match': '(?i)(\\.(fx|lo|up|tl|te|l(case)?|range|m|scale|prior|slack(up|lo)?|infeas))'
+    'match': '(?i)(\\.(fx|lo|up|tl|te|l(case)?|range|m|scale|prior|slack(up|lo)?|infeas))\\b'
     'name': 'storage.type.variable.gams'
   }
   {
