@@ -3,7 +3,6 @@
 ]
 'name': 'GAMS'
 'patterns':[
-  # Comments
   {
     'match': '\\%[0-9]+'
     'name': 'storage.type.macro.gams'
@@ -12,6 +11,7 @@
     'match': '\\%([a-zA-Z0-9_])+\\%'
     'name': 'storage.type.macro.gams'
   }
+  # Comments
   {
     'captures':
       '0':
@@ -109,7 +109,7 @@
   }
   {
     'match': '\\b(?i)(yes|no|off)\\b'
-    'name': 'constant.boolean.gams'
+    'name': 'constant.language.gams'
   }
 
   # Keywords

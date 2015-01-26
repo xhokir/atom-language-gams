@@ -1,11 +1,17 @@
 {
   "name": "language-gams",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "A GAMS language implementation for Atom.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xhokir/atom-language-gams"
+  },
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
   },
   "dependencies": {
-  }
+  },
+  "readmeFilename": "README.md",
+  "homepage": "https://github.com/xhokir/atom-language-gams",
 }
