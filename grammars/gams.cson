@@ -1,5 +1,5 @@
 'fileTypes': [
-  'gms'
+  'gms','inc'
 ]
 'name': 'GAMS'
 'patterns':[
