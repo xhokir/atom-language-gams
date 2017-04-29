@@ -1,0 +1,48 @@
+'.source.gams':
+  'Entry':
+    'prefix': 'entry'
+    'description': 'Generic entry for single statement'
+    'body': '${1:name} ${2:Optional description} / ${3:value} /'
+  'Set':
+    'prefix': 'set'
+    'description': 'Sets declaration'
+    'body': 'Set ${1:entry};'
+  'Scalar':
+    'prefix': 'scalar'
+    'description': 'Scalar declaration'
+    'body': 'Scalar ${1:entry};'
+  'Parameter':
+    'prefix': 'param'
+    'description': 'Parameters declaration'
+    'body': 'Parameter ${1:entry};'
+  'Table':
+    'prefix': 'table'
+    'description': 'Table format'
+    'body': '''
+            Table ${1:name}(${2:deps}) ${3:Optional description}
+                      ${4:cols}
+            ${5:rows} ${6:vales}
+            '''
+  'Variable':
+    'prefix': 'var'
+    'description': 'Variable declaration'
+    'body': '${1:type} Variable ${2:name};'
+  'Equations':
+    'prefix': 'eqs'
+    'description': 'Initial equations declaration'
+    'body': '''
+            Equations
+                ${1:eqname(i)};
+            '''
+  'Equation':
+    'prefix': 'eq'
+    'description': 'Single equation'
+    'body': '${1:eqname(i)} .. ${2:equation};'
+  'Model':
+    'prefix': 'model'
+    'description': 'Model declaration'
+    'body': 'Model ${1:name} ${2:Optional description} / ${3:all} /;'
+  'Solve':
+    'prefix': 'solve'
+    'description': 'Solve statement'
+    'body': 'Solve ${1:name} using ${2:type} ${3:direction} ${5:objective};'

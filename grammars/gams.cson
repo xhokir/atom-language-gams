@@ -1,7 +1,8 @@
+'scopeName': 'source.gams'
+'name': 'GAMS'
 'fileTypes': [
   'gms','inc'
 ]
-'name': 'GAMS'
 'patterns':[
   {
     'match': '\\%[0-9]+'
@@ -49,7 +50,8 @@
   }
   {
     'match': '\\(|\\)'
-    'name': 'keyword.operator.parenthesis.gams'
+    'name': 'keyword.ope
+rator.parenthesis.gams'
   }
   {
     'match': ','
@@ -211,4 +213,3 @@
     'name': 'support.utility.gams'
   }
 ]
-'scopeName': 'source.gams'

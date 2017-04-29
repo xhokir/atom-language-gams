@@ -1,7 +1,8 @@
+'scopeName': 'source.gams-lst'
+'name': 'GAMS'
 'fileTypes': [
   'lst'
 ]
-'name': 'GAMS'
 'patterns':[
   {
     'captures':
@@ -27,4 +28,3 @@
     'name': 'keyword.other.gams'
   }
 ]
-'scopeName': 'source.gams-lst'
