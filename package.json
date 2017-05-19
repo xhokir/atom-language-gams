@@ -1,6 +1,6 @@
 {
   "name": "language-gams",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A GAMS language implementation for Atom.io",
   "repository": "https://github.com/xhokir/atom-language-gams",
   "license": "MIT",
