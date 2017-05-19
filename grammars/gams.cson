@@ -114,7 +114,7 @@
 
   # Keywords
   {
-    'match': '^(?i)((set|(positive |negative |free |nonnegative |interger |binary |sos1 |sos2 |semicont |semiint )?variable|parameter|scalar|equation|file)s?)\\b'
+    'match': '^(?i)((set|(positive |negative |free |nonnegative |integer |binary |sos1 |sos2 |semicont |semiint )?variable|parameter|scalar|equation|file)s?)\\b'
     'name': 'keyword.declaration.gams'
   }
   {
