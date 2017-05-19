@@ -8,7 +8,7 @@
     'name': 'storage.type.macro.gams'
   }
   {
-    'match': '\\%([a-zA-Z0-9_])+\\%'
+    'match': '\\%([a-zA-Z0-9_\\.])+\\%'
     'name': 'storage.type.macro.gams'
   }
   # Comments
@@ -114,7 +114,7 @@
 
   # Keywords
   {
-    'match': '^(?i)((set|(positive |negative |free |nonnegative |integer |binary |sos1 |sos2 |semicont |semiint )?variable|parameter|scalar|equation|file)s?)\\b'
+    'match': '^(?i)((set|table|(positive |negative |free |nonnegative |integer |binary |sos1 |sos2 |semicont |semiint )?variable|parameter|scalar|equation|file)s?)\\b'
     'name': 'keyword.declaration.gams'
   }
   {
@@ -126,7 +126,7 @@
     'name': 'keyword.control.comment.gams'
   }
   {
-    'match': '\\$(?i)(abort|double|echo|eject|error|lines|log|(on|off)(dollar|echo|include|listing|symlist|symxref|uellist|uelxref|upper)|single|stars|stitle|title)\\b'
+    'match': '\\$(?i)(abort|display|double|echo|eject|error|lines|log|(on|off)(dollar|echo|include|listing|symlist|symxref|uellist|uelxref|upper)|single|stars|stitle|title)\\b'
     'name': 'keyword.control.lst.gams'
   }
   {
@@ -134,7 +134,7 @@
     'name': 'keyword.control.include.gams'
   }
   {
-    'match': '\\$(?i)(abort|error|goto|if((i)?( not)?)|label|(set|drop|eval)(global|local)?)\\b'
+    'match': '\\$(?i)(abort|else|elseif|endif|error|goto|if((i)?(( not)?( set)?|( set)?))|label|(set|drop|eval)(global|local)?)\\b'
     'name': 'keyword.control.content.gams'
   }
   {
