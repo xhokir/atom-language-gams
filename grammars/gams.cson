@@ -212,8 +212,8 @@
     'name': 'support.utility.gams'
   }
   {
-    'begin': '\\b(?i)(onembeddedcode)\\b'
-    'end': '\\b(?i)(offembeddedcode)\\b'
+    'begin': '\\b(?i)(onembeddedcode|onembeddedcodes|onembeddedcodev|continueembeddedcode|embeddedcode|embeddedcodes|embeddedcodev)\\b'
+    'end': '\\b(?i)(offembeddedcode|pauseembeddedcode|endembeddedcode)\\b'
     'name': 'keyword.control.embedded.gams'
     'patterns': [
       {
