@@ -50,8 +50,7 @@
   }
   {
     'match': '\\(|\\)'
-    'name': 'keyword.ope
-rator.parenthesis.gams'
+    'name': 'keyword.operator.parenthesis.gams'
   }
   {
     'match': ','
@@ -211,5 +210,15 @@ rator.parenthesis.gams'
   {
     'match': '\\b(?i)(csv2gdx|gdx(copy|diff|dump|merge|rank|viewer|xrw|2access|2xls)|mcfilter|mdb2gms|sql2gms|xls2gms)\\b'
     'name': 'support.utility.gams'
+  }
+  {
+    'begin': '\\b(?i)(onembeddedcode|onembeddedcodes|onembeddedcodev|continueembeddedcode|embeddedcode|embeddedcodes|embeddedcodev)\\b'
+    'end': '\\b(?i)(offembeddedcode|pauseembeddedcode|endembeddedcode)\\b'
+    'name': 'keyword.control.embedded.gams'
+    'patterns': [
+      {
+        'include': 'source.python'
+      }
+    ]
   }
 ]
