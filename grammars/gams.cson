@@ -28,11 +28,11 @@
     'name': 'comment.line.custom.gams'
   }
   {
-    'begin': '\\$(?i)(ontext)'
+    'begin': '\\$\\$?(?i)(ontext)'
     'beginCaptures':
       '0':
         'name': 'punctuation.definition.comment.begin.gams'
-    'end': '\\$(?i)(offtext)'
+    'end': '\\$\\$?(?i)(offtext)'
     'endCaptures':
       '0':
         'name': 'punctuation.definition.comment.end.gams'
@@ -105,21 +105,21 @@
     'name': 'string.quoted.single.gams'
   }
   {
-    'match': '\\b(-?)[0-9]+(\\.[0-9]*)?([eE](-?)[0-9]+)?\\b'
+    'match': '\\b(-?)([0-9]|inf)+(\\.[0-9]*)?([eE](-?)[0-9]+)?\\b'
     'name': 'constant.numeric.gams'
   }
   {
-    'match': '\\b(?i)(yes|no|off)\\b'
+    'match': '\\b(?i)(yes|no|off|on)\\b'
     'name': 'constant.language.gams'
   }
 
   # Keywords
   {
-    'match': '^(?i)((set|table|(positive |negative |free |nonnegative |integer |binary |sos1 |sos2 |semicont |semiint )?variable|parameter|scalar|equation|file)s?)\\b'
+    'match': '\\b(?i)((acronym|set|table|(positive |negative |free |nonnegative |integer |binary |sos1 |sos2 |semicont |semiint )?variable|parameter|scalar|equation|file)s?)\\b'
     'name': 'keyword.declaration.gams'
   }
   {
-    'match': '\\$(?i)(setargs)\\b'
+    'match': '\\$(?i)(setargs|macro)\\b'
     'name': 'storage.type.macro.gams'
   }
   {
@@ -127,7 +127,7 @@
     'name': 'keyword.control.comment.gams'
   }
   {
-    'match': '\\$(?i)(abort|display|double|echo|eject|error|lines|log|(on|off)(dollar|echo|include|listing|symlist|symxref|uellist|uelxref|upper)|single|stars|stitle|title)\\b'
+    'match': '\\$(?i)(abort|display|double|echo|eject|error|lines|log|(on|off)(order|dollar|echo|include|listing|symlist|symxref|uellist|uelxref|upper|delim|embedded|empty|digit|end|eps|externalinput|global|idcprotect|suffixdlvars|undf|uni|warning)|single|stars|stitle|title|show)\\b'
     'name': 'keyword.control.lst.gams'
   }
   {
@@ -135,7 +135,7 @@
     'name': 'keyword.control.include.gams'
   }
   {
-    'match': '\\$(?i)(abort|else|elseif|endif|error|goto|if((i)?(( not)?( set)?|( set)?))|label|(set|drop|eval)(global|local)?)\\b'
+    'match': '\\$(?i)(abort|else|elseif(i|e)?|endif|error|goto|if(then)?((i|e)?(( not)?( set)?|( set)?))|label|(set|drop|eval)(global|local)?)\\b'
     'name': 'keyword.control.content.gams'
   }
   {
@@ -147,11 +147,11 @@
     'name': 'storage.modifier.gams'
   }
   {
-    'match': '\\$(?i)(gdx(in|out)|load|unload)\\b'
+    'match': '\\$(?i)(gdx(in|out)|load(dc)?|unload)\\b'
     'name': 'keyword.control.gdx.gams'
   }
   {
-    'match': '\\$(?i)(dollar|(on|off)(delim|empty|end|multi|warning)|phantom|use(205|225|999))\\b'
+    'match': '\\$(?i)(dollar|(on|off)(delim|empty|end|multi|warning|dotl)|phantom|use(205|225|999))\\b'
     'name': 'keyword.control.compiler.gams'
   }
   {
@@ -163,11 +163,11 @@
     'name': 'keyword.other.gams'
   }
   {
-    'match': '\\b(?i)(if|while|loop|put(close)?|abort)\\b'
+    'match': '\\b(?i)(if|while|loop|put(close)?|abort|else|display)\\b'
     'name': 'keyword.flow.gams'
   }
   {
-    'match': '\\b(?i)(alias|sum|prod|abs)\\b'
+    'match': '\\b(?i)(alias|sum|prod|abs|min|max)\\b'
     'name': 'keyword.function.gams'
   }
   {
@@ -180,11 +180,11 @@
   }
 
   {
-    'match': '(?i)(\\.(fx|lo|up|tl|te|l(case)?|range|m|scale|prior|slack(up|lo)?|infeas))\\b'
+    'match': '(?i)(\\.(fx|lo|up|tl|te|l(case)?|range|m|scale|prior|slack(up|lo)?|infeas|val|pc|nd))\\b'
     'name': 'storage.type.variable.gams'
   }
   {
-    'match': '\\b(?i)((execute(\\_unload)?))\\b'
+    'match': '\\b(?i)((execute((\\_unload)|(\\_load(dc)?)|(\\_LOADPOINT))?)|put\\_utility)\\b'
     'name': 'support.function.gams'
   }
   {
